@@ -9,7 +9,7 @@ Simple Debian9 docker images with SSH access
 To create the image `debian9_docker_sshd` with latest Debian release, 
 execute the following commands on the debian9_docker_sshd folder:
 
-    git checkout master
+    git clone https://github.com/smarterq/debian9_docker_sshd.git && cd debian9_docker_sshd
     docker build -t julydateme/debian9_docker_sshd . 
 
 ## Running debian9-ssh
@@ -26,7 +26,7 @@ for user `root`. To get the password, check the logs of the container by running
 You will see an output like the following:
 
 	========================================================================
-	You can now connect to this debian9_docker_sshd container via SSH using:
+	You can now connect to this debian9 container via SSH using:
 
 	    ssh -p <port> root@<host>
 	and enter the root password 'qJixrU8ToNxe4xRg' when prompted
