@@ -10,7 +10,7 @@ To create the image `debian9-ssh` with latest Debian release,
 execute the following commands on the debian-ssh folder:
 
     git checkout master
-    docker build -t july/debian9-ssh
+    docker build -t july/debian9-ssh . 
 
 ## Running debian9-ssh
 
