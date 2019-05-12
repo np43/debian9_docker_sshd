@@ -4,7 +4,7 @@ MAINTAINER Julydate <i@xhtml.love>
 
 RUN apt-get update \
 	    && apt-get -q -y dist-upgrade \
-	    && apt-get -q -y install --no-install-recommends openssh-server \
+	    && apt-get -q -y install --no-install-recommends openssh-server pwgen \
 	    && apt-get clean \
 	    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN mkdir /var/run/sshd
