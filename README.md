@@ -7,7 +7,7 @@ Simple Debian9 docker images with SSH access
 ## Usage
 
 To create the image `debian9-ssh` with latest Debian release, 
-execute the following commands on the debian-ssh folder:
+execute the following commands on the debian9_docker_sshd folder:
 
     git checkout master
     docker build -t july/debian9-ssh . 
@@ -44,5 +44,5 @@ Done!
 If you want to use a preset password instead of a random generated one, you can
 set the environment variable `ROOT_PASS` to your specific password when running the container:
 
-	docker run -d -p 2333:22 -e ROOT_PASS="mypass" july/debian9-ssh
+	docker run -d -p 2333:22 -e ROOT_PASS="rootpasswd" july/debian9-ssh
 
