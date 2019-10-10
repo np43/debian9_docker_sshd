@@ -1,6 +1,17 @@
-FROM debian:stretch
+FROM debian:9.9-slim
+MAINTAINER Nick Patel <nick@rads.io>
 
+<<<<<<< HEAD
 MAINTAINER NP <nick@rads.io>
+=======
+# SSHD Server
+# To Build: docker build -t np43/sshd .
+# To Run:   docker run -d -p 8088:80 -p 4438:443 -p 2222:22 --name server1 np43/sshd
+# Connect:  docker exec -it server1 /bin/bash
+# To get this info run: docker run --rm np43/sshd /getinfo.sh
+
+
+>>>>>>> 29d4b0976704a80c471328eaa48286e1c41f8d79
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -18,6 +29,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 ADD set_root_pw.sh /set_root_pw.sh
 ADD superupdate.sh /superupdate.sh
+ADD getinfo.sh /getinfo.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 EXPOSE 22

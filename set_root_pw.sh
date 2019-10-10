@@ -17,7 +17,8 @@ touch /.root_pw_set
 
 echo "========================================================================"
 echo "You can now connect to this Debian9 container via SSH using:"
-echo "	docker run -d --name ssh -p 2222:22 np43/debian-docker"
+echo "	docker run -d --name ssh -p 2222:22 np43/sshd"
+echo "	ssh -p 2222 root@localhost"
 echo "	ssh -p <port> root@<host>"
 echo "and enter the root password '$PASS' when prompted"
 echo ""
