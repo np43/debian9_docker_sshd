@@ -9,14 +9,14 @@ Simple Debian9 docker images with SSH access
 To create the image `debian9_docker_sshd` with latest Debian release, 
 execute the following commands on the debian9_docker_sshd folder:
 
-    git clone https://github.com/smarterq/debian9_docker_sshd.git && cd debian9_docker_sshd
-    docker build -t julydateme/debian9_docker_sshd . 
+    git clone https://github.com/np43/debian9_docker_sshd.git && cd debian9_docker_sshd
+    docker build -t np43/debian9_docker_sshd . 
 
 ## Running debian9-ssh
 
 To run a container from the image binding it to port 2333 in all interfaces, execute:
 
-	docker run -d -p 2333:22 julydateme/debian9_docker_sshd
+	docker run -d -p 2222:22 np43/debian9_docker_sshd
 
 The first time that you run your container, a random password will be generated
 for user `root`. To get the password, check the logs of the container by running:
@@ -29,6 +29,7 @@ You will see an output like the following:
 	You can now connect to this debian9 container via SSH using:
 
 	    ssh -p <port> root@<host>
+	    ssh -p 2222 root@localhost
 	and enter the root password 'qJixrU8ToNxe4xRg' when prompted
 
 	Please remember to change the above password as soon as possible!
